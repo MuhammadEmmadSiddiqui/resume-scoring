@@ -1,0 +1,11 @@
+torch
+scikit-learn
+transformers
+Groq
+spacy
+PyMuPDF
+setuptools
+wheel
+matplotlib
+seaborn
+plotly==5.15.0
