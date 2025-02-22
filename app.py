@@ -199,11 +199,10 @@ if jd_file and resume_files:
 
     filtered_df = results_df[
         (results_df['Total experience in Years'] >= min_exp) &
-        (results_df['technical_skills'].apply(lambda x: any(skill in x for skill in skill_filter) if skill_filter else True)
+        (results_df['technical_skills'].apply(
+            lambda x: any(skill in x for skill in skill_filter) if skill_filter else True
+        ))
     ]
 
     st.write(f"Showing {len(filtered_df)} matching candidates")
     st.dataframe(filtered_df)
-
-else:
-    st.info("Please upload both a Job Description and Resumes to begin analysis")
