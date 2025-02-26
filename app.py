@@ -28,7 +28,18 @@ clients = [Groq(api_key=key) for key in api_keys if key.strip()]
 
 instruction = """
 You are an AI bot designed to parse resumes and extract the following details in below JSON:
-[Keep the original instruction content here]
+1. full_name: 
+2. university_name: of most recent degree (return the short form of the university name else return full name) 
+3. national_university/international_university: "return National if inside Pak else return International" 
+4. email_id: if available else return "N/A"
+5. github_link: if available else return "N/A"
+6. employment_details: (company, position, years_of_experience, location, tags: teaching/industry/internship)
+7. total_professional_experience: total experience in years excluding internships (return Fresh Graduate if not available)
+8. technical_skills:
+9. soft_skills: 
+10. location: 
+
+Return all information in JSON format.
 """
 ###################### Core Functions #######################
 
